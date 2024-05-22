@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+.form-container {
+    max-width: 350px;
+    padding: 1rem;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    }
+
+.btn {
+    display: flex;
+    text-align: center;
+}

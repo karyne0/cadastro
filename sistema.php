@@ -20,10 +20,10 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
     <title>sistema</title>
 </head>
 <body>
-    <h1>Programa de boas vindas.</h1>
-    <p>Olá, <?php echo $_SESSION['nome']; ?> Seja bem vindo!</p>
-    <p >
-        <a href="logout.php">Sair</a>
-    </p>
+    <h1>Programa de boas vindas</h1>
+    <p>Olá, <?php
+    $_SESSION["nome"] = $usuario->nome;
+    echo $_SESSION['nome']; ?> Seja bem vindo(a)!</p>
+    <a href="login.php">voltar</a>
 </body>
 </html>

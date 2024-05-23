@@ -50,9 +50,8 @@ if(isset($_POST['submit']))
     </div>
     <br>
     <div id="btn">
-        <button type="submit" name="submit" id="submit" class="btn btn-primary">enviar</button>
-        <button type="submit" name="submit" id="submit" class="btn btn-primary"><a href="login.php">logar</a></button>
-
+        <button style="float: right; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary">enviar</button>
+        <button style="float: left; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary"><a href="login.php">logar</a></button>
     </div>
     </form>
 </main>

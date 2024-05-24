@@ -22,7 +22,6 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 <body>
     <h1>Programa de boas vindas</h1>
     <p>Olá, <?php
-    $_SESSION["nome"] = $usuario->nome;
     echo $_SESSION['nome']; ?> Seja bem vindo(a)!</p>
     <a href="login.php">voltar</a>
 </body>

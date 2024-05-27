@@ -53,6 +53,9 @@ if(isset($_POST['submit']))
         <button style="float: right; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary">enviar</button>
         <button style="float: left; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary"><a href="login.php">logar</a></button>
     </div>
+    <br>
+    <br>
+    <a href="painel.php">Voltar</a>
     </form>
 </main>
 </body>

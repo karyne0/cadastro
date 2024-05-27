@@ -25,6 +25,7 @@
     <button  type="submit" name="submit" id="submit" class="btn btn-primary">entrar</button>
     <br>
     <a href="cadastro.php">Fazer o Cadastro</a>
+    <a href="painel.php">Voltar</a>
 </form>
 </main>
 </body>

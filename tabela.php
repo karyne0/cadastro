@@ -1,4 +1,11 @@
 <?php
+
+$hostname = "localhost";
+$bancodedados = "cadastro";
+$usuario = "root";
+$senha = "";
+
+$conexao = mysqli($hostname, $usuario, $senha, $bancodedados);
 $sql = "SELECT * FROM usuarios";
 
 $result = $result->query($sql);

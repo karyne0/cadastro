@@ -14,7 +14,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Barra de navegação</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -28,7 +28,6 @@
           <a class="nav-link" href="tabela.php">Banco de dados</a>
         </li>
       </ul>
-      </span>
     </div>
   </div>
 </nav>

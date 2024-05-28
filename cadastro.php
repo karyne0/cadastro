@@ -30,8 +30,15 @@ if(isset($_POST['submit']))
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="painel.css">
 </head>
 <body class="d-flex align-itens-center py-4 bg-body-tertiary">
+<ul> 
+<li>
+<a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
+</li>
+<li><a href="login.php">Login</a></li>
+</ul>
 <main class="w-100 m-auto form-container">
 <form action="" method="POST">
     <h1>Cadastre-se</h1>
@@ -51,11 +58,7 @@ if(isset($_POST['submit']))
     <br>
     <div id="btn">
         <button style="float: right; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary">enviar</button>
-        <button style="float: left; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary"><a href="login.php">logar</a></button>
     </div>
-    <br>
-    <br>
-    <a href="painel.php">Voltar</a>
     </form>
 </main>
 </body>

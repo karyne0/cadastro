@@ -12,9 +12,10 @@
 <body class="d-flex align-itens-center py-4 bg-body-tertiary">
 <ul> 
 <li>
-<a href="painel.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
+<a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
 </li>
 <li><a href="cadastro.php">Cadastro</a></li>
+<li><a href="tabela.php">Usuários</a></li>
 </ul>
 <main class="w-100 m-auto form-container">
 <form action="testlogin.php" method="POST">

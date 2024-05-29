@@ -2,11 +2,11 @@
 session_start();
 
 //print_r($_REQUEST);
+include_once('config.php');
 
 if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']))
 {
     //Acessa
-    include_once('config.php');
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
@@ -31,7 +31,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
         {
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
-            header('Location: home.php');
+            header('Location: painel.php');
         }
 
 }

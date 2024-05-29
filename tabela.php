@@ -1,16 +1,46 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios-lista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+<ul> 
+<li>
+<a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
+</li>
+<li><a href="login.php">Login</a></li>
+<li><a href="cadastro.php">Cadastro</a></li>
+</ul>
+<br>
+<br>
+<br>
+    <h1>Usuários</h1>
+</body>
+</html>
 
+<?php
 $hostname = "localhost";
 $bancodedados = "cadastro";
 $usuario = "root";
 $senha = "";
 
-$conexao = mysqli($hostname, $usuario, $senha, $bancodedados);
+$conexao = new mysqli($hostname, $usuario, $senha, $bancodedados);
+/*if($mysqli->connect_error){
+echo "falha ao conectar :(" . $mysqli->connect_error . ")" . $mysqli->connect_error;
+}
+else
+echo "conectado ao banco de dados";*/
 $sql = "SELECT * FROM usuarios";
 
-$result = $result->query($sql);
+$result = $conexao->query($sql);
 
-$quantidade = $result->mysqli_num_rows;
+$quantidade = $result->num_rows;
 
 if($quantidade >0){
     print"<table class='table table-hover table-striped table-bordered'>";
@@ -27,10 +57,9 @@ if($quantidade >0){
         print "<td>" .$row->nome. "</td>";
         print "<td>" .$row->email. "</td>";
         print "<td>" .$row->senha. "</td>";
-        print "<td>" .$row->senha. "</td>";
        print "<td>
-        <button class='btn btn-sucess'>Editar</button>
-        <button class='btn btn-danger'>Excluir</button>
+        <button class='btn btn-sm btn-success'>Editar</button>
+        <button class='btn btn-sm btn-danger'>Excluir</button>
        </td>";
         print"</tr>";
     }
@@ -39,15 +68,3 @@ if($quantidade >0){
     print "<p class='alert-danger' >Não Encontrou Resultados!</p>";
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios-lista</title>
-</head>
-<body>
-    
-</body>
-</html>

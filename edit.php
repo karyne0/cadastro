@@ -16,7 +16,7 @@ if(!empty($_GET['id']))
     {
     $nome =  $row['nome'];
     $email =  $row['email'];
-    $senha =  md5($row['senha']);
+    $senha =  $row['senha'];
     }
     print_r($nome);
    }
@@ -61,14 +61,12 @@ if(!empty($_GET['id']))
         <label for="floatingInput">E-mail</label>
     </div>
     <div class="form-floating">
-        <input type="password" name="senha" value="<?php echo($senha) ?>" class="form-control" id="floatingInput" placeholder="senha" />
+        <input type="text" name="senha"  value="<?php echo($senha) ?>" class="form-control" id="floatingInput" placeholder="senha" />
         <label for="floatingInput">Senha</label>
     </div>
-    <br>
-    <div id="btn">
-        <button style="float: right; vertical-align: middle;" type="submit" name="update" id="update" class="btn btn-success">Salvar</button>
-    </div>
-    <input type="hidden" name="id" value=" <?php echo($id)?>">
+    <br><br>
+    <input type="hidden" name="id" value=" <?php echo $id?>">
+    <input style="float: right; vertical-align: middle;" type="submit" name="update" id="update" class="btn btn-success">
     </form>
 </main>
 </body>

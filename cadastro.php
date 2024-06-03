@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 
     $nome =  $_POST['nome'];
     $email =  $_POST['email'];
-    $senha =  ($_POST['senha']);
+    $senha =  $_POST['senha'];
 
     $sql = "INSERT INTO usuarios (nome,email,senha) VALUES ('$nome','$email','$senha')";
     $result = mysqli_query ($conexao, $sql);
@@ -57,8 +57,8 @@ if(isset($_POST['submit']))
         <label for="floatingInput">Criar Senha</label>
     </div>
     <br>
-    <div id="btn">
-        <button style="float: right; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary">enviar</button>
+    <div>
+        <button style="float: right; vertical-align: middle;" type="submit" name="submit" id="submit" class="btn btn-primary">Enviar</button>
     </div>
     </form>
 </main>

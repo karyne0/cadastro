@@ -14,13 +14,9 @@ a {
     color: white;
     height: 5px;
     width: 5px;
-    }
+}
 
 .btn {
     display: flex;
     text-align: center;
-}
-.box-search{
-    display: flex;
-    justify-content: center;
 }

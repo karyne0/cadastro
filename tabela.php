@@ -102,13 +102,13 @@
        var search = document.getElementById('pesquisar');
 
        search.addEventListener("keydown", function(event){
-            if(event.key === "Enter")
+            if (event.key === "Enter")
             {
                 searchData();
             }
         });
 
-       funcion searchData()
+       function searchData()
        {
             window.location =  'tabela.php?search='+search.value;
        }

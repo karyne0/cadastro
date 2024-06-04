@@ -30,7 +30,14 @@
                     <label for="floatingInput">Senha</label>
                 </div>
                 <br>
-                <button  type="submit" name="submit" id="submit" class="btn btn-primary">entrar</button>
+                <?php
+                    session_start();
+                    include_once('config.php');
+                                print "<td>" .$row->id. "</td>";
+                    print "<td>
+                        <a class='btn btn-sm btn-primary' type='submit' id='submit' href='painel.php?id= $row->id'>entrar</a>
+                    </td>";
+                ?>
             </form>
         </main>
     </body>

@@ -1,31 +1,26 @@
 <?php
 
-if(!empty($_GET['id']))
-{
-    include_once('config.php');
-
-    $id= $_GET['id'];
-
-    $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
-
-    $result = $conexao->query($sqlSelect);
-
-   if($result->num_rows > 0){
-
-    while($row = mysqli_fetch_assoc($result))
+    if(!empty($_GET['id']))
     {
-    $nome =  $row['nome'];
-    $email =  $row['email'];
-    $senha =  $row['senha'];
+        include_once('config.php');
+
+        $id= $_GET['id'];
+
+        $sqlSelect = "SELECT * FROM usuarios WHERE id='$id'";
+
+        $result = $conexao->query($sqlSelect);
+
+        if($result->num_rows > 0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                $nome =  $row['nome'];
+                $email =  $row['email'];
+                $senha =  $row['senha'];
+            }
+            print_r($nome);
+        }
     }
-    print_r($nome);
-   }
-
-   else{
-    header('Location: home.php');
-   }
-
-}
 
 ?>
 <!DOCTYPE html>
@@ -49,23 +44,25 @@ if(!empty($_GET['id']))
         </ul>
         <main class="w-100 m-auto form-container">
             <form action="saveEdit.php" method="POST">
-                <h1>Editar</h1>
-                <br>
-                <div class="form-floating">
-                    <input type="name" name="nome" value="<?php echo($nome) ?>" class="form-control" id="floatingInput" placeholder="seu nome completo"/>
-                    <label for="floatingInput">Nome</label>
-                </div>
-                <div class="form-floating">
-                    <input type="email" name="email" value="<?php echo($email) ?>" class="form-control" id="floatingInput" placeholder="your-email@gmail.com" />
-                    <label for="floatingInput">E-mail</label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" name="senha"  value="<?php echo($senha) ?>" class="form-control" id="floatingInput" placeholder="senha" />
-                    <label for="floatingInput">Senha</label>
-                </div>
-                <br><br>
-                <input type="hidden" name="id" value=" <?php echo $id?>">
-                <input style="float: right; vertical-align: middle;" type="submit" name="update" id="update" class="btn btn-success">
+                <fieldset>
+                    <h1>Editar</h1>
+                    <br>
+                    <div class="form-floating">
+                        <input type="name" name="nome" value="<?php echo($nome) ?>" class="form-control" id="floatingInput" placeholder="seu nome completo"/>
+                        <label for="floatingInput">Nome</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" name="email" value="<?php echo($email) ?>" class="form-control" id="floatingInput" placeholder="your-email@gmail.com" />
+                        <label for="floatingInput">E-mail</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" name="senha"  value="<?php echo($senha) ?>" class="form-control" id="floatingInput" placeholder="senha" />
+                        <label for="floatingInput">Senha</label>
+                    </div>
+                    <br><br>
+                    <input type="hidden" name="id" value="<?php echo $id?>">
+                    <input style="float: right; vertical-align: middle;" type="submit" name="update" id="update" class="btn btn-success">
+                </fieldset>
             </form>
         </main>
     </body>

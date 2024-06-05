@@ -5,23 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Usuarios-lista</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="painel.css">
+        <link rel="stylesheet" href="table.css">
     </head>
 <body class="d-flex align-itens-center py-4 bg-body-tertiary">
-    <ul> 
-        <li>
-            <a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
-        </li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="cadastro.php">Cadastro</a></li>
-        <li><a href="tabela.php">Usuários</a></li>
-    </ul>
+    <div>
+        <ul> 
+            <li>
+                <a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
+            </li>
+            <li>
+                <a href="login.php">Login</a>
+            </li>
+            <li>
+                <a href="cadastro.php">Cadastro</a>
+            </li>
+            <li>
+                <a href="tabela.php">Usuários</a>
+            </li>
+        </ul>
+    </div>
     <br>
     <br>
     <br>
     <div class="container">
         <table class="table table-hover table-striped table-bordered">
+            <br>
+            <br>
         <h1>Usuários</h1>
         <br>
             <div class="box-search">
@@ -64,7 +73,6 @@
             print "<th>id</th>";
             print "<th>nome</th>";
             print "<th>email</th>";
-            print "<th>senha</th>";
             print "<th>ações</th>";
         print"</tr>";
     while($row = $result->fetch_object())
@@ -73,7 +81,6 @@
                 print "<td>" .$row->id. "</td>";
                 print "<td>" .$row->nome. "</td>";
                 print "<td>" .$row->email. "</td>";
-                print "<td>" .$row->senha. "</td>";
                 print "<td>
                     <a class='btn btn-sm btn-primary' href='edit.php?id=$row->id'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

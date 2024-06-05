@@ -15,5 +15,5 @@
             $resultDelete = $conexao->query($sqlDelete);
         }
         }
-    header('Location: home.php');
+    header('Location: tabela.php');
     ?>

@@ -1,16 +1,24 @@
 <?php
-    include_once('config.php');
 
-    if(isset($_POST['update']))
-    {
-        $nome =  $_POST['nome'];
-        $email =  $_POST['email'];
-        $senha =  $_POST['senha'];
+include('config.php');
 
-        $sqlUpdate = "UPDATE usuarios SET nome='$nome', email='$email', senha='$senha' WHERE id='$id'";
 
-        $result = $conexao->query($sqlUpdate);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+   
+    $sql = "UPDATE usuarios SET nome='$nome', email='$email', senha='$senha' WHERE id=$id";
+
+    if ($conexao->query($sql) === TRUE) {
+        header("Location: tabela.php");
+    } else {
+        echo "Erro ao atualizar o registro: " . $conexao->error;
     }
-    header('Location: tabela.php');
+} else {
+    echo "O formulário não foi enviado corretamente.";
+}
 ?>

@@ -12,6 +12,4 @@
         }
     else
         echo "conectado ao banco de dados";*/
-
-        $nome
 ?>

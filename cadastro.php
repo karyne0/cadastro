@@ -37,6 +37,7 @@ if(isset($_POST['submit']))
                 <a href="home.php"><img src="home.png" alt="" width="30" height="30" style="float:left"></a>
             </li>
             <li><a href="login.php">Login</a></li>
+            <li><a href="cadastro.php">Cadastro</a></li>
             <li><a href="tabela.php">Usuários</a></li>
         </ul>
          <main class="w-100 m-auto form-container">

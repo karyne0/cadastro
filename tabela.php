@@ -27,7 +27,7 @@
     <br>
     <br>
     <br>
-    <div class="container">
+    <div class="container" >
         <table class="table table-hover table-striped table-bordered">
             <br>
             <br>
@@ -70,10 +70,11 @@
     if($quantidade >0)
     {
         print"<tr>";
-            print "<th>id</th>";
-            print "<th>nome</th>";
-            print "<th>email</th>";
-            print "<th>ações</th>";
+            print "<th>#</th>";
+            print "<th>Nome</th>";
+            print "<th>Email</th>";
+            print "<th>Senha</th>";
+            print "<th>editar/excluir</th>";
         print"</tr>";
     while($row = $result->fetch_object())
         {
@@ -81,6 +82,11 @@
                 print "<td>" .$row->id. "</td>";
                 print "<td>" .$row->nome. "</td>";
                 print "<td>" .$row->email. "</td>";
+                print "<td>
+                    <a class='btn btn-sm btn-secondary' href='redefinir.php?id=$row->id'>
+                        Redefinir Senha
+                    </a>
+                </td>";
                 print "<td>
                     <a class='btn btn-sm btn-primary' href='edit.php?id=$row->id'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

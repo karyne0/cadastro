@@ -32,7 +32,7 @@
                     <label for="floatingInput">Senha</label>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Entrar</button>
             </form>
         </main>
     </body>

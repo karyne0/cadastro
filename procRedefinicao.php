@@ -1,0 +1,1 @@
+php para processas a redefiniçao da senha, vai mandar um email ao usuário e direcionar um link para ele redefinir sua senh
